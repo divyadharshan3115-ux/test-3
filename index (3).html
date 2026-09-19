@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamline Cotton - Pure Cotton Crafted by Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #444748;
+            background: linear-gradient(90deg, #e8dcc8 0%, #f5f0e8 100%);
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(232, 220, 200, 0.95);
+            backdrop-filter: blur(6px);
+            box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 24px 64px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+        }
+
+        .nav-left a, .nav-right a {
+            text-decoration: none;
+            color: #444748;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-left a:hover, .nav-right a:hover {
+            color: #060607;
+        }
+
+        .nav-center {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            color: #060607;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-center:hover {
+            color: #d4a574;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 40px;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #444748;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .icon-btn:hover {
+            color: #060607;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #d4a574;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            align-items: center;
+            padding: 120px 64px;
+            background: linear-gradient(90deg, #e8dcc8 0%, #f5f0e8 100%);
+            margin-top: 82px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 64px;
+            font-weight: 400;
+            letter-spacing: -1.28px;
+            color: #060607;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #444748;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .hero-list {
+            margin-bottom: 32px;
+        }
+
+        .hero-list-item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 11.5px;
+            font-size: 16px;
+            color: #1c1b1b;
+        }
+
+        .hero-list-item::before {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: #060607;
+            color: white;
+            border-radius: 2px;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid #060607;
+            background: #060607;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Hanken Grotesk', sans-serif;
+            border-radius: 4px;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #060607;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #060607;
+        }
+
+        .btn-outline:hover {
+            background: #060607;
+            color: white;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 700px;
+            background: #f0f0f0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ========== TRUST BADGES ========== */
+        .trust-section {
+            background: #d4a574;
+            border-top: 1px solid #c4c7c7;
+            border-bottom: 1px solid #c4c7c7;
+            padding: 33px 64px;
+        }
+
+        .trust-container {
+            display: flex;
+            gap: 64px;
+            justify-content: center;
+            align-items: center;
+            max-width: 1440px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .trust-badge-icon {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .trust-badge p {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        /* ========== SHOP SECTION ========== */
+        .shop-section {
+            display: none;
+            background: #e8dcc8;
+            padding: 80px 64px;
+        }
+
+        .shop-section.active {
+            display: block;
+        }
+
+        .shop-header {
+            text-align: center;
+            margin-bottom: 48px;
+            max-width: 1440px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .shop-header h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: #060607;
+            margin-bottom: 16px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #e0d5cf;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 16px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #060607;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #d4a574;
+            margin-bottom: 8px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            min-height: 42px;
+        }
+
+        .product-add-btn {
+            width: 100%;
+            padding: 12px;
+            background: #060607;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .product-add-btn:hover {
+            background: #d4a574;
+        }
+
+        /* ========== CART MODAL ========== */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-modal.active {
+            display: flex;
+        }
+
+        .cart-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .cart-header h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: #060607;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .cart-items {
+            margin-bottom: 24px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            color: #060607;
+            margin-bottom: 4px;
+        }
+
+        .cart-item-price {
+            font-size: 14px;
+            color: #d4a574;
+        }
+
+        .cart-item-qty {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .qty-btn {
+            background: #f0f0f0;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .qty-btn:hover {
+            background: #e0e0e0;
+        }
+
+        .remove-btn {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 12px;
+        }
+
+        .cart-summary {
+            border-top: 2px solid #060607;
+            padding-top: 16px;
+            margin-bottom: 24px;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 600;
+            color: #060607;
+            margin-bottom: 16px;
+        }
+
+        .cart-total-price {
+            color: #d4a574;
+        }
+
+        .cart-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .cart-actions button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .checkout-btn {
+            background: #060607;
+            color: white;
+        }
+
+        .checkout-btn:hover {
+            background: #d4a574;
+        }
+
+        .continue-shopping-btn {
+            background: #f0f0f0;
+            color: #060607;
+        }
+
+        .continue-shopping-btn:hover {
+            background: #e0e0e0;
+        }
+
+        /* ========== CHECKOUT MODAL ========== */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2100;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkout-modal.active {
+            display: flex;
+        }
+
+        .checkout-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .checkout-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .checkout-header h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: #060607;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: #060607;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 14px;
+            border: 1px solid #d0c8c0;
+            border-radius: 4px;
+            font-family: 'Hanken Grotesk', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #060607;
+            box-shadow: 0 0 0 3px rgba(6, 6, 7, 0.1);
+        }
+
+        .form-message {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: none;
+            text-align: center;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* ========== ADMIN PANEL ========== */
+        .admin-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 3000;
+            overflow-y: auto;
+            padding-top: 82px;
+        }
+
+        .admin-panel.active {
+            display: block;
+        }
+
+        .admin-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 40px 64px;
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .admin-header h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 32px;
+            font-weight: 400;
+            color: #060607;
+        }
+
+        .add-product-form {
+            background: #f7f3f2;
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .form-grid.full {
+            grid-template-columns: 1fr;
+        }
+
+        .products-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .admin-product-card {
+            background: white;
+            border: 1px solid #e0d5cf;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .admin-product-image {
+            width: 100%;
+            height: 150px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .admin-product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .admin-product-info {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .admin-product-info strong {
+            color: #060607;
+        }
+
+        .admin-product-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .admin-product-actions button {
+            flex: 1;
+            padding: 8px;
+            font-size: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .edit-btn {
+            background: #d4a574;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background: #c39559;
+        }
+
+        .delete-btn {
+            background: #ff4444;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background: #cc0000;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #f1edec;
+            border-top: 1px solid #c4c7c7;
+            padding: 120px 64px;
+        }
+
+        .footer-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
+            gap: 24px;
+        }
+
+        .footer-section h3 {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #060607;
+            margin-bottom: 16px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            color: #060607;
+            margin-bottom: 24px;
+        }
+
+        .footer-section p {
+            font-size: 16px;
+            color: #444748;
+            margin-bottom: 8px;
+        }
+
+        .footer-list {
+            list-style: none;
+        }
+
+        .footer-list li {
+            margin-bottom: 12px;
+        }
+
+        .footer-list a {
+            text-decoration: none;
+            color: #444748;
+            font-size: 16px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .footer-list a:hover {
+            color: #060607;
+        }
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-container { grid-template-columns: 1fr 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding: 60px 16px; }
+            .hero-content h1 { font-size: 40px; }
+            .btn { width: 100%; }
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #999;
+            padding: 40px 20px;
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a onclick="showSection('home')">Home</a>
+                <a onclick="showSection('shop')">Shop</a>
+            </div>
+            <a href="https://www.dreamlinefashions.in/" target="_blank" class="nav-center">Dreamline Cotton</a>
+            <div class="nav-right">
+                <a onclick="showSection('contact')">Contact</a>
+                <div class="nav-icons">
+                    <button class="icon-btn" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-count" id="cartCount" style="display: none;">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== HOME SECTION ========== -->
+    <div id="homeSection">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Pure Cotton.<br>Crafted by Us.<br>Worn by You.</h1>
+                <p>From sourcing the finest cotton to stitching, finishing, quality inspection, and packaging, every garment is created in our own manufacturing facility.</p>
+
+                <div class="hero-list">
+                    <div class="hero-list-item">100% Cotton</div>
+                    <div class="hero-list-item">Manufactured In-House</div>
+                    <div class="hero-list-item">Export Quality Standards</div>
+                    <div class="hero-list-item">Quality Checked Before Shipping</div>
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn" onclick="showSection('shop')">Shop Collection</button>
+                    <button class="btn btn-outline" onclick="showSection('about')">Learn More</button>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&h=700&fit=crop" alt="Cotton apparel">
+            </div>
+        </section>
+
+        <section class="trust-section">
+            <div class="trust-container">
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">✓</div>
+                    <p>Export Quality</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🇮🇳</div>
+                    <p>Made in India</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🧵</div>
+                    <p>100% Cotton</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">🔒</div>
+                    <p>Secure Checkout</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ========== SHOP SECTION ========== -->
+    <section class="shop-section" id="shopSection">
+        <div class="shop-header">
+            <h2>Our Collection</h2>
+            <p>Premium cotton garments crafted to perfection</p>
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products loaded here -->
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="aboutSection" style="display: none; background: linear-gradient(90deg, #e8dcc8 0%, #f5f0e8 100%); padding: 80px 64px;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h1 style="font-family: 'Bodoni Moda', serif; font-size: 48px; font-weight: 400; color: #060607; margin-bottom: 16px;">About Dreamline Cotton</h1>
+                <p style="font-size: 18px; color: #444748; line-height: 1.8;">From humble beginnings to global excellence</p>
+            </div>
+
+            <div style="background: white; padding: 48px; border-radius: 12px; border: 1px solid #d0c8c0; margin-bottom: 40px;">
+                <!-- Our Journey -->
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-family: 'Bodoni Moda', serif; font-size: 32px; font-weight: 400; color: #060607; margin-bottom: 16px;">🌱 Our Journey</h2>
+                    <p style="font-size: 16px; color: #444748; line-height: 1.8; margin-bottom: 12px;">
+                        Dreamline Cotton began its remarkable journey over <strong>10 years ago</strong>, starting from raw materials and bottoms. What began as a vision to create quality cotton products has evolved into a trusted name in the textile industry.
+                    </p>
+                </div>
+
+                <!-- Quality & Expertise -->
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-family: 'Bodoni Moda', serif; font-size: 32px; font-weight: 400; color: #060607; margin-bottom: 16px;">✓ Quality & Expertise</h2>
+                    <p style="font-size: 16px; color: #444748; line-height: 1.8; margin-bottom: 12px;">
+                        With a decade of experience in manufacturing, we have mastered the art of creating premium quality cotton products with exceptional quantity output and timely delivery. Every garment is crafted with precision and care to ensure customer satisfaction.
+                    </p>
+                </div>
+
+                <!-- Our Infrastructure -->
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-family: 'Bodoni Moda', serif; font-size: 32px; font-weight: 400; color: #060607; margin-bottom: 16px;">🏭 Our Infrastructure</h2>
+                    <p style="font-size: 16px; color: #444748; line-height: 1.8; margin-bottom: 12px;">
+                        We proudly operate our <strong>own manufacturing unit and factory in Tiruppur</strong>, the textile capital of India. Additionally, we have strategic partnerships with <strong>more than 10 factories in Tiruppur</strong>, giving us the capacity and flexibility to meet any production requirement.
+                    </p>
+                </div>
+
+                <!-- Global Reach -->
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-family: 'Bodoni Moda', serif; font-size: 32px; font-weight: 400; color: #060607; margin-bottom: 16px;">🌍 Global Export Excellence</h2>
+                    <p style="font-size: 16px; color: #444748; line-height: 1.8; margin-bottom: 12px;">
+                        With <strong>8-10 years of export experience</strong>, we have successfully shipped our products to customers across the globe. We can take bulk orders and provide export services to any country worldwide, maintaining the highest quality standards throughout.
+                    </p>
+                </div>
+
+                <!-- Online Sales -->
+                <div>
+                    <h2 style="font-family: 'Bodoni Moda', serif; font-size: 32px; font-weight: 400; color: #060607; margin-bottom: 16px;">🛍️ Direct-to-Customer Sales</h2>
+                    <p style="font-size: 16px; color: #444748; line-height: 1.8;">
+                        Recently, we have expanded into direct online sales, bringing our premium cotton products directly to customers at competitive and affordable prices. By eliminating middlemen, we can offer the best quality at unbeatable costs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div style="background: #f5f0e8; padding: 40px; border-radius: 12px; margin-bottom: 40px;">
+                <h2 style="font-family: 'Bodoni Moda', serif; font-size: 32px; font-weight: 400; color: #060607; margin-bottom: 24px; text-align: center;">Why Choose Dreamline Cotton?</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">✓</div>
+                        <h3 style="font-size: 16px; font-weight: 600; color: #060607; margin-bottom: 8px;">10+ Years Experience</h3>
+                        <p style="font-size: 14px; color: #666;">Decade of expertise in cotton manufacturing</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">🏭</div>
+                        <h3 style="font-size: 16px; font-weight: 600; color: #060607; margin-bottom: 8px;">Own Manufacturing</h3>
+                        <p style="font-size: 14px; color: #666;">Complete control over quality and production</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">🌍</div>
+                        <h3 style="font-size: 16px; font-weight: 600; color: #060607; margin-bottom: 8px;">Global Export</h3>
+                        <p style="font-size: 14px; color: #666;">Shipping to customers worldwide</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">💰</div>
+                        <h3 style="font-size: 16px; font-weight: 600; color: #060607; margin-bottom: 8px;">Best Prices</h3>
+                        <p style="font-size: 14px; color: #666;">Premium quality at affordable costs</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">📦</div>
+                        <h3 style="font-size: 16px; font-weight: 600; color: #060607; margin-bottom: 8px;">Bulk Orders</h3>
+                        <p style="font-size: 14px; color: #666;">Flexible quantities for all needs</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 12px;">🧵</div>
+                        <h3 style="font-size: 16px; font-weight: 600; color: #060607; margin-bottom: 8px;">100% Cotton</h3>
+                        <p style="font-size: 14px; color: #666;">Pure cotton, premium quality</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div style="background: #d4a574; padding: 40px; border-radius: 12px; color: white; text-align: center;">
+                <h2 style="font-family: 'Bodoni Moda', serif; font-size: 28px; font-weight: 400; margin-bottom: 24px;">Get In Touch With Us</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+                    <div>
+                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">📞 Phone</h3>
+                        <a href="tel:+917339519346" style="color: white; text-decoration: none; font-size: 14px;">+91 733 951 9346</a>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">📧 Email</h3>
+                        <a href="mailto:divyadharshan3115@gmail.com" style="color: white; text-decoration: none; font-size: 14px;">divyadharshan3115@gmail.com</a>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">💼 LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/divyadharshan-velusamy-44685333b" target="_blank" style="color: white; text-decoration: none; font-size: 14px;">Divyadharshan Velusamy</a>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.3);">
+                    <p style="font-size: 14px; margin: 4px 0;">Dreamline Cotton</p>
+                    <p style="font-size: 14px; margin: 4px 0;">Tiruppur, Tamil Nadu, India</p>
+                    <p style="font-size: 14px; margin: 4px 0;">© 2024 All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contactSection" style="display: none; background: #e8dcc8; padding: 80px 64px; margin-top: 0;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <h2 style="font-family: 'Bodoni Moda', serif; font-size: 32px; font-weight: 400; color: #060607; margin-bottom: 16px;">Get In Touch</h2>
+                <p style="font-size: 16px; color: #444748;">We'd love to hear from you. Reach out to us through any of these channels.</p>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid #e0d5cf;">
+                <!-- Phone -->
+                <div style="margin-bottom: 32px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 12px;">☎️</div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: #060607; margin-bottom: 8px;">Phone</h3>
+                    <a href="tel:+917339519346" style="font-size: 16px; color: #d4a574; text-decoration: none; font-weight: 600;">+91 733 951 9346</a>
+                </div>
+
+                <!-- Email -->
+                <div style="margin-bottom: 32px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 12px;">✉️</div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: #060607; margin-bottom: 8px;">Email</h3>
+                    <a href="mailto:divyadharshan3115@gmail.com" style="font-size: 16px; color: #d4a574; text-decoration: none; font-weight: 600;">divyadharshan3115@gmail.com</a>
+                </div>
+
+                <!-- LinkedIn -->
+                <div style="margin-bottom: 32px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 12px;">💼</div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: #060607; margin-bottom: 8px;">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/divyadharshan-velusamy-44685333b" target="_blank" style="font-size: 16px; color: #d4a574; text-decoration: none; font-weight: 600;">Divyadharshan Velusamy</a>
+                </div>
+
+                <!-- Instagram -->
+                <div style="text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 12px;">📸</div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: #060607; margin-bottom: 8px;">Instagram</h3>
+                    <a href="https://www.instagram.com/_dharshan._.velusamy_?stkn=a3V1Z201ZGZmeDFh&utm_source=qr" target="_blank" style="font-size: 16px; color: #d4a574; text-decoration: none; font-weight: 600;">@_dharshan._.velusamy_</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CART MODAL ========== -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="cart-close" onclick="toggleCart()">×</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="cart-total-price" id="cartTotal">₹0</span>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="continue-shopping-btn" onclick="toggleCart()">Continue Shopping</button>
+                <button class="checkout-btn" onclick="openCheckout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CHECKOUT MODAL ========== -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2>Checkout</h2>
+                <button class="cart-close" onclick="closeCheckout()">×</button>
+            </div>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="checkoutName">Full Name</label>
+                    <input type="text" id="checkoutName" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkoutEmail">Email</label>
+                    <input type="email" id="checkoutEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkoutPhone">Phone</label>
+                    <input type="tel" id="checkoutPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkoutAddress">Address</label>
+                    <textarea id="checkoutAddress" required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Place Order</button>
+                <div id="checkoutMessage" class="form-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== ADMIN PANEL ========== -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h2>Product Management</h2>
+                <button class="btn btn-outline" onclick="closeAdminPanel()">Close</button>
+            </div>
+
+            <div class="add-product-form">
+                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 24px; color: #060607;">Add New Product</h3>
+                <form id="addProductForm">
+                    <div class="form-grid">
+                        <div class="form-group"><label for="productName">Name *</label><input type="text" id="productName" required></div>
+                        <div class="form-group"><label for="productPrice">Price *</label><input type="number" id="productPrice" required></div>
+                        <div class="form-group"><label for="productCategory">Category</label><input type="text" id="productCategory"></div>
+                        <div class="form-group"><label for="productImageURL">Image URL</label><input type="url" id="productImageURL"></div>
+                        <div class="form-group"><label for="productSizes">Sizes</label><input type="text" id="productSizes" placeholder="S, M, L, XL"></div>
+                        <div class="form-group"><label for="productColors">Colors</label><input type="text" id="productColors" placeholder="Red, Blue, White"></div>
+                        <div class="form-group"><label for="productStock">Stock</label><input type="number" id="productStock"></div>
+                        <div class="form-group"><label for="productSKU">SKU</label><input type="text" id="productSKU"></div>
+                        <div class="form-group"><label for="productMaterial">Material</label><input type="text" id="productMaterial" placeholder="100% Cotton"></div>
+                        <div class="form-group"><label for="productRating">Rating</label><input type="number" id="productRating" min="0" max="5" step="0.1"></div>
+                        <div class="form-group"><label for="productDiscount">Discount %</label><input type="number" id="productDiscount" min="0" max="100"></div>
+                        <div class="form-group form-grid full"><label for="productDescription">Description</label><textarea id="productDescription" style="width: 100%; height: 100px; padding: 12px; border: 1px solid #d0c8c0; border-radius: 4px;"></textarea></div>
+                    </div>
+                    <button type="submit" class="btn">Add Product</button>
+                    <div id="addProductMessage" class="form-message" style="margin-top: 16px;"></div>
+                </form>
+            </div>
+
+            <h3 style="font-size: 18px; font-weight: 600; margin: 40px 0 24px 0;">Products</h3>
+            <div class="products-list" id="adminProductsList"></div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Dreamline Cotton</h4>
+                <p>© 2024 DREAMLINE COTTON. CRAFTED IN INDIA.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul class="footer-list">
+                    <li><a onclick="showSection('home')">About</a></li>
+                    <li><a onclick="showSection('shop')">Shop</a></li>
+                    <li><a onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Social</h3>
+                <ul class="footer-list">
+                    <li><a href="https://www.instagram.com/_dharshan._.velusamy_?stkn=a3V1Z201ZGZmeDFh&utm_source=qr" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/divyadharshan-velusamy-44685333b" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-list">
+                    <li><a href="tel:+917339519346">☎️ +91 733 951 9346</a></li>
+                    <li><a href="mailto:divyadharshan3115@gmail.com">✉️ Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/divyadharshan-velusamy-44685333b" target="_blank">💼 LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwcDB2mmYVjFChrWERFOVKhRLo1tZuOjHnSSGDq9C226hkvjNt6m68XGyJtvrU9Y1l0Vg/exec';
+        let cart = [];
+        let products = [];
+
+        function showSection(section) {
+            document.getElementById('homeSection').style.display = section === 'home' ? 'block' : 'none';
+            document.getElementById('shopSection').classList.toggle('active', section === 'shop');
+            document.getElementById('aboutSection').style.display = section === 'about' ? 'block' : 'none';
+            document.getElementById('contactSection').style.display = section === 'contact' ? 'block' : 'none';
+        }
+
+        async function loadProducts() {
+            try {
+                const response = await fetch(SCRIPT_URL + '?' + new URLSearchParams({ action: 'getCollections' }), { method: 'GET', mode: 'cors' }).catch(() => null);
+                if (response && response.ok) {
+                    const data = await response.json();
+                    if (data.success) products = data.data;
+                }
+            } catch (e) {}
+            
+            if (products.length === 0) {
+                products = [
+                    { id: 'COL-1', name: 'Classic White T-Shirt', price: 499, description: 'Premium 100% cotton', imageURL: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop', category: 'T-Shirts', sizes: 'S, M, L, XL', colors: 'White', stock: 50 },
+                    { id: 'COL-2', name: 'Blue Casual Shirt', price: 799, description: 'Comfortable cotton shirt', imageURL: 'https://images.unsplash.com/photo-1596362051847-6c4dc5c84a0b?w=300&h=300&fit=crop', category: 'Shirts', sizes: 'S, M, L', colors: 'Blue', stock: 30 }
+                ];
+            }
+            displayProducts();
+            displayAdminProducts();
+        }
+
+        function displayProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = products.length === 0 ? '<div class="empty-message">No products</div>' : products.map(p => `
+                <div class="product-card">
+                    <div class="product-image"><img src="${p.imageURL || 'https://via.placeholder.com/300x200'}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x200'"></div>
+                    <div class="product-info">
+                        <div class="product-category">${p.category || 'Uncategorized'}</div>
+                        <div class="product-name">${p.name}</div>
+                        <div class="product-price">₹${p.price}</div>
+                        <div class="product-description">${p.description || 'Premium quality'}</div>
+                        <button class="product-add-btn" onclick="addToCart('${p.id}', '${p.name}', ${p.price})">Add to Cart</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function displayAdminProducts() {
+            const list = document.getElementById('adminProductsList');
+            list.innerHTML = products.length === 0 ? '<div class="empty-message">No products</div>' : products.map(p => `
+                <div class="admin-product-card">
+                    <div class="admin-product-image"><img src="${p.imageURL || 'https://via.placeholder.com/300x200'}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/300x200'"></div>
+                    <div class="admin-product-info"><strong>${p.name}</strong></div>
+                    <div class="admin-product-info">₹${p.price} | Stock: ${p.stock || 0}</div>
+                    <div class="admin-product-actions">
+                        <button class="edit-btn" onclick="editProduct('${p.id}')">Edit</button>
+                        <button class="delete-btn" onclick="deleteProduct('${p.id}')">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showAdminPanel() { document.getElementById('adminPanel').classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeAdminPanel() { document.getElementById('adminPanel').classList.remove('active'); document.body.style.overflow = 'auto'; }
+
+        document.getElementById('addProductForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('productName').value, price = document.getElementById('productPrice').value;
+            if (!name || !price) { showMsg('addProductMessage', 'Name and Price required', 'error'); return; }
+            
+            const url = SCRIPT_URL + '?' + new URLSearchParams({
+                action: 'addCollection', name, price,
+                description: document.getElementById('productDescription').value,
+                imageURL: document.getElementById('productImageURL').value,
+                category: document.getElementById('productCategory').value,
+                sizes: document.getElementById('productSizes').value,
+                colors: document.getElementById('productColors').value,
+                stock: document.getElementById('productStock').value,
+                sku: document.getElementById('productSKU').value,
+                material: document.getElementById('productMaterial').value,
+                rating: document.getElementById('productRating').value,
+                discount: document.getElementById('productDiscount').value
+            });
+
+            await fetch(url, { method: 'GET', mode: 'no-cors' }).then(() => {
+                products.push({ id: 'COL-' + Date.now(), name, price, description: document.getElementById('productDescription').value, imageURL: document.getElementById('productImageURL').value, category: document.getElementById('productCategory').value, sizes: document.getElementById('productSizes').value, colors: document.getElementById('productColors').value, stock: document.getElementById('productStock').value, sku: document.getElementById('productSKU').value, material: document.getElementById('productMaterial').value, rating: document.getElementById('productRating').value, discount: document.getElementById('productDiscount').value });
+                displayProducts();
+                displayAdminProducts();
+                document.getElementById('addProductForm').reset();
+                showMsg('addProductMessage', 'Product added!', 'success');
+            }).catch(() => showMsg('addProductMessage', 'Error', 'error'));
+        });
+
+        function deleteProduct(id) {
+            if (!confirm('Delete this product?')) return;
+            fetch(SCRIPT_URL + '?' + new URLSearchParams({ action: 'deleteCollection', id }), { method: 'GET', mode: 'no-cors' }).then(() => {
+                products = products.filter(p => p.id !== id);
+                displayProducts();
+                displayAdminProducts();
+            }).catch(() => alert('Error'));
+        }
+
+        function addToCart(id, name, price) {
+            const item = cart.find(i => i.id === id);
+            if (item) item.qty += 1;
+            else cart.push({ id, name, price, qty: 1 });
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateCartUI() {
+            const count = cart.reduce((s, i) => s + i.qty, 0);
+            document.getElementById('cartCount').textContent = count;
+            document.getElementById('cartCount').style.display = count > 0 ? 'flex' : 'none';
+
+            let total = 0;
+            document.getElementById('cartItems').innerHTML = cart.length === 0 ? '<div class="empty-message">Cart empty</div>' : cart.map(item => {
+                const t = item.price * item.qty;
+                total += t;
+                return `<div class="cart-item"><div class="cart-item-info"><div class="cart-item-name">${item.name}</div><div class="cart-item-price">₹${item.price} x ${item.qty}</div></div><div class="cart-item-qty"><button class="qty-btn" onclick="updateQty('${item.id}', -1)">-</button><span>${item.qty}</span><button class="qty-btn" onclick="updateQty('${item.id}', 1)">+</button><button class="remove-btn" onclick="removeFromCart('${item.id}')">Remove</button></div></div>`;
+            }).join('');
+            document.getElementById('cartTotal').textContent = '₹' + total;
+        }
+
+        function updateQty(id, change) {
+            const item = cart.find(i => i.id === id);
+            if (item) { item.qty += change; if (item.qty <= 0) removeFromCart(id); else updateCartUI(); }
+        }
+
+        function removeFromCart(id) { cart = cart.filter(i => i.id !== id); updateCartUI(); }
+        function toggleCart() { document.getElementById('cartModal').classList.toggle('active'); }
+        function openCheckout() { if (cart.length === 0) alert('Cart empty'); else { toggleCart(); document.getElementById('checkoutModal').classList.add('active'); } }
+        function closeCheckout() { document.getElementById('checkoutModal').classList.remove('active'); }
+
+        document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('checkoutName').value, email = document.getElementById('checkoutEmail').value, phone = document.getElementById('checkoutPhone').value;
+            if (!name || !email || !phone) { showMsg('checkoutMessage', 'All fields required', 'error'); return; }
+
+            const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+            const url = SCRIPT_URL + '?' + new URLSearchParams({ action: 'submitOrder', customerName: name, customerEmail: email, customerPhone: phone, items: JSON.stringify(cart), totalAmount: total });
+
+            await fetch(url, { method: 'GET', mode: 'no-cors' }).then(() => {
+                showMsg('checkoutMessage', 'Order placed!', 'success');
+                cart = [];
+                updateCartUI();
+                setTimeout(() => { closeCheckout(); showSection('home'); }, 2000);
+            }).catch(() => showMsg('checkoutMessage', 'Error', 'error'));
+        });
+
+        function showMsg(id, msg, type) { const el = document.getElementById(id); el.className = 'form-message ' + type; el.textContent = (type === 'success' ? '✓ ' : '✗ ') + msg; setTimeout(() => el.style.display = 'none', 4000); }
+
+        document.addEventListener('DOMContentLoaded', () => { loadProducts(); showSection('home'); });
+    </script>
+</body>
+</html>
